@@ -1,0 +1,1248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* ==============================
+   GLOBAL STYLE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #7545ef;
+    --pink: #f044a5;
+    --blue: #3478f6;
+    --cyan: #13b8c8;
+    --orange: #ff8a3d;
+    --green: #13b99a;
+    --red: #f05268;
+    --gold: #f5b82e;
+    --dark: #20183f;
+    --muted: #817c9d;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    background: #f7f6ff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ==============================
+   NAVIGATION BAR
+================================ */
+.navbar {
+    padding: 18px 0;
+}
+
+.academy-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid #ece8fa;
+    box-shadow: 0 5px 25px #38236c08;
+}
+
+.navbar-brand {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #241749 !important;
+    letter-spacing: -1px;
+}
+
+.navbar-brand span:last-child {
+    color: var(--purple);
+}
+
+.nav-logo {
+    display: inline-grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    margin-right: 7px;
+    border-radius: 13px;
+    color: white;
+    background: linear-gradient(135deg, #7545ef, #ed4ca5);
+    box-shadow: 0 6px 18px #7545ef40;
+}
+
+.nav-link-pill {
+    padding: 11px 17px;
+    border-radius: 12px;
+    color: #63577f;
+    font-weight: 600;
+}
+
+.nav-link-pill:hover {
+    color: var(--purple);
+    background: #f1eaff;
+}
+
+.btn-nav {
+    color: white;
+    background: linear-gradient(120deg, #241749, #6741b7);
+    border: none;
+}
+
+.btn-nav:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px #43277e35;
+}
+
+/* ==============================
+   ALL BUTTONS
+================================ */
+.btn {
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    color: white;
+    background: linear-gradient(110deg, #7045ee, #a642e8, #ee4da5);
+    box-shadow: 0 8px 22px #8d43e82e;
+}
+
+.btn-primary:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px #8d43e84a;
+    background: linear-gradient(110deg, #5830d2, #8d35d6, #d9368d);
+}
+
+.btn-outline-secondary {
+    border: 1px solid #ded6f5;
+    color: #66558a;
+    background: white;
+}
+
+.btn-outline-secondary:hover {
+    color: white;
+    background: #6750b8;
+}
+
+/* ==============================
+   LOGIN PAGE BACKGROUND
+================================ */
+.login-bg {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 22px;
+    background:
+        radial-gradient(circle at 10% 10%, #8149e7 0, transparent 32%),
+        radial-gradient(circle at 90% 85%, #f044a5 0, transparent 30%),
+        radial-gradient(circle at 65% 5%, #1caed0 0, transparent 24%),
+        linear-gradient(135deg, #10152f, #29205d 55%, #143d5d);
+}
+
+.login-bg::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: -180px;
+    right: -90px;
+    border-radius: 50%;
+    background: #ff8c6a45;
+    filter: blur(10px);
+}
+
+.login-bg::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    bottom: -150px;
+    left: -60px;
+    border-radius: 50%;
+    background: #24d6bd38;
+    filter: blur(10px);
+}
+
+/* ==============================
+   LOGIN CARD
+================================ */
+.login-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 440px;
+    padding: 42px 36px;
+    border: 1px solid #ffffffb0;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 35px 90px #060b2b70;
+    text-align: center;
+    animation: slideUp 0.7s ease;
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 20px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #e5dcff, #ffe0f1, #d9f8ff);
+    font-size: 43px;
+    box-shadow: 0 10px 30px #7545ef20;
+}
+
+.login-card h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #251849;
+    margin-bottom: 8px;
+}
+
+.login-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.login-card .form-label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    color: #493e69;
+}
+
+/* ==============================
+   INPUT FIELDS
+================================ */
+.form-control,
+.form-select {
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 15px;
+    border: 1px solid #e5e0f2;
+    border-radius: 13px;
+    background-color: #fcfbff;
+    color: #30244e;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: #aaa4be;
+}
+
+.form-control:hover,
+.form-select:hover {
+    border-color: #b7a2f5;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--purple);
+    background: white;
+    box-shadow: 0 0 0 4px #7545ef20;
+    outline: none;
+}
+
+.login-card .btn {
+    min-height: 51px;
+    width: 100%;
+}
+
+.demo-note {
+    margin-top: 22px;
+    padding: 12px;
+    border-radius: 12px;
+    background: linear-gradient(110deg, #f0eaff, #ffedf7, #e7faff);
+    color: #6b6087;
+    font-size: 11px;
+}
+
+.login-foot {
+    margin-top: 22px;
+    color: #aaa3bd;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ==============================
+   HERO SECTION
+================================ */
+.hero {
+    padding: 85px 20px;
+    background:
+        radial-gradient(circle at 15% 20%, #e4d9ff, transparent 35%),
+        radial-gradient(circle at 90% 80%, #ffd9ed, transparent 32%),
+        linear-gradient(120deg, #edf2ff, #fff4fa, #e9fbff);
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(38px, 5vw, 66px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #26194e;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #7545ef, #ed43a3, #ff8a3d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 18px auto 25px;
+    color: #77718f;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.hero-cta {
+    color: white;
+    background: linear-gradient(100deg, #7045ee, #d843c6, #f044a5);
+    box-shadow: 0 10px 25px #a244d838;
+}
+
+.hero-cta:hover {
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* ==============================
+   SECTION HEADINGS
+================================ */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.table-hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #241944;
+}
+
+.section-heading h2 span,
+.table-hero h1 span {
+    color: var(--purple);
+}
+
+.section-heading p,
+.table-hero p {
+    color: #837c9d;
+    font-size: 14px;
+}
+
+.eyebrow {
+    color: var(--purple);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* ==============================
+   COURSE CARDS
+================================ */
+.course-card {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    padding: 27px;
+    border: 1px solid #eeebf8;
+    border-radius: 23px;
+    background: white;
+    box-shadow: 0 10px 30px #32215c09;
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.course-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--accent, #7545ef);
+}
+
+.course-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 24px 45px #32215c19;
+}
+
+.course-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.course-icon {
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    border-radius: 20px;
+    background: var(--tint, #f0eaff);
+    font-size: 36px;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-icon {
+    transform: rotate(-7deg) scale(1.07);
+}
+
+.course-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--accent, #7545ef);
+    opacity: 0.55;
+}
+
+.category-chip {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 30px;
+    color: var(--accent, #7545ef);
+    background: var(--tint, #f0eaff);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+
+.course-card h5 {
+    margin: 16px 0 10px;
+    color: #292047;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.course-card p {
+    min-height: 55px;
+    color: #85809c;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.course-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 17px 0;
+    border-top: 1px solid #f0edf8;
+    color: #807995;
+    font-size: 12px;
+}
+
+.course-meta strong {
+    color: var(--accent, #7545ef);
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+}
+
+.apply-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid #f0edf8;
+    color: #44375f;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.apply-link span {
+    display: grid;
+    place-items: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 11px;
+    background: var(--tint, #f0eaff);
+    color: var(--accent, #7545ef);
+    font-size: 18px;
+}
+
+.apply-link:hover {
+    color: var(--accent, #7545ef);
+}
+
+.apply-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* Different colours for each course */
+.course-violet {
+    --accent: #7545ef;
+    --tint: #f0eaff;
+}
+
+.course-blue {
+    --accent: #3478f6;
+    --tint: #e8f1ff;
+}
+
+.course-orange {
+    --accent: #f18737;
+    --tint: #fff0e2;
+}
+
+.course-pink {
+    --accent: #e448a0;
+    --tint: #ffebf5;
+}
+
+.course-teal {
+    --accent: #0b9d91;
+    --tint: #e1faf5;
+}
+
+.course-red {
+    --accent: #e74f67;
+    --tint: #ffebef;
+}
+
+/* ==============================
+   COURSE APPLICATION PAGE
+================================ */
+.apply-hero {
+    padding: 55px 0 85px;
+    background: linear-gradient(115deg, #eae4ff, #ffe9f5, #e2f9ff);
+}
+
+.apply-hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(34px, 4vw, 49px);
+    font-weight: 800;
+    color: #26194e;
+}
+
+.apply-hero p {
+    color: #7c7596;
+}
+
+.apply-wrap {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 25px;
+    align-items: start;
+    margin-top: -38px;
+    margin-bottom: 70px;
+}
+
+.apply-course-panel {
+    position: relative;
+    overflow: hidden;
+    padding: 32px;
+    border-radius: 24px;
+    color: white;
+    background: linear-gradient(145deg, #6541e8, #a342dc, #ec4fa6);
+    box-shadow: 0 20px 45px #8046cb35;
+}
+
+.apply-course-panel::after {
+    content: "✦";
+    position: absolute;
+    top: -40px;
+    right: -20px;
+    font-size: 190px;
+    color: #ffffff12;
+}
+
+.apply-icon {
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 27px;
+    border-radius: 22px;
+    background: #ffffff25;
+    font-size: 37px;
+}
+
+.apply-course-panel .eyebrow {
+    color: #ffffffc9;
+}
+
+.apply-course-panel h2 {
+    position: relative;
+    z-index: 1;
+    margin: 13px 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.apply-course-panel p {
+    position: relative;
+    z-index: 1;
+    color: #ffffffdc;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.panel-blue {
+    background: linear-gradient(145deg, #2164d9, #358ce8, #48c6d9);
+}
+
+.panel-orange {
+    background: linear-gradient(145deg, #d96a31, #f39a42, #ffbd6b);
+}
+
+.panel-pink {
+    background: linear-gradient(145deg, #b72d7b, #e34f9b, #f58bbd);
+}
+
+.panel-teal {
+    background: linear-gradient(145deg, #067873, #0cae9c, #51d7b8);
+}
+
+.panel-red {
+    background: linear-gradient(145deg, #b72d55, #e75c6a, #f6a07d);
+}
+
+.panel-stats {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid #ffffff4d;
+}
+
+.panel-stats small,
+.panel-stats strong {
+    display: block;
+}
+
+.panel-stats small {
+    margin-bottom: 7px;
+    color: #ffffffbd;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.panel-stats strong {
+    font-size: 14px;
+}
+
+.panel-footer {
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+    padding: 14px;
+    border: 1px solid #ffffff35;
+    border-radius: 13px;
+    background: #ffffff13;
+    color: white;
+    font-size: 11px;
+}
+
+/* Application form */
+.form-card {
+    max-width: 100%;
+    padding: 36px;
+    border: 1px solid #ebe7f7;
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 18px 48px #3120520c;
+}
+
+.form-step {
+    color: var(--purple);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.form-step span {
+    color: #aaa4bc;
+}
+
+.form-card h2 {
+    margin: 13px 0 8px;
+    color: #261c49;
+    font-family: 'Outfit', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.form-intro {
+    margin-bottom: 27px;
+    color: #89839f;
+    font-size: 13px;
+}
+
+.submit-application {
+    min-height: 52px;
+}
+
+.submit-application span {
+    margin-left: 12px;
+}
+
+.privacy-note {
+    margin-top: 17px;
+    color: #9891ad;
+    text-align: center;
+    font-size: 10px;
+}
+
+/* ==============================
+   APPLICATIONS TABLE PAGE
+================================ */
+.table-hero {
+    padding: 65px 0 100px;
+    background: linear-gradient(115deg, #e8e2ff, #ffe8f4, #e3f9ff);
+}
+
+.table-hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(35px, 4vw, 48px);
+    font-weight: 800;
+}
+
+.table-hero h1 span {
+    color: #a246df;
+}
+
+.table-hero p {
+    color: #7d7695;
+}
+
+.table-section {
+    margin-top: -50px;
+    margin-bottom: 75px;
+}
+
+.table-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 23px 25px;
+    border: 1px solid #ece7f7;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    background: white;
+}
+
+.table-toolbar strong,
+.table-toolbar small {
+    display: block;
+}
+
+.table-toolbar strong {
+    color: #2b214b;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+.table-toolbar small {
+    margin-top: 4px;
+    color: #9992ab;
+    font-size: 11px;
+}
+
+.records-chip {
+    padding: 9px 13px;
+    border-radius: 11px;
+    background: #eee8ff;
+    color: #7649dc;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.table-shell {
+    overflow: hidden;
+    border: 1px solid #ece7f7;
+    border-radius: 0 0 20px 20px;
+    background: white;
+    box-shadow: 0 20px 50px #3220520b;
+}
+
+.table {
+    min-width: 850px;
+    margin-bottom: 0;
+    color: #514968;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.table thead th {
+    padding: 17px 15px;
+    border-bottom: 1px solid #e9e3f8;
+    background: linear-gradient(100deg, #f1edff, #fff0f7, #ecfaff);
+    color: #756b92;
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 17px 15px;
+    border-color: #f0edf8;
+}
+
+.table tbody tr:hover td {
+    background: #fcfaff;
+}
+
+.table-sub {
+    display: block;
+    margin-top: 5px;
+    color: #9a93ad;
+    font-size: 10px;
+}
+
+.id-chip {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 9px;
+    background: #eee8ff;
+    color: #7545ef;
+    font-weight: 800;
+}
+
+.qualification-chip {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 9px;
+    background: #e0faf1;
+    color: #078d75;
+    font-weight: 700;
+}
+
+.fee-text {
+    color: #7545ef;
+}
+
+.empty-state {
+    padding: 60px 20px !important;
+    text-align: center;
+}
+
+.empty-state > span {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 45px;
+}
+
+.empty-state strong {
+    display: block;
+    color: #32264f;
+    font-size: 18px;
+}
+
+.empty-state p {
+    margin: 9px 0 20px;
+    color: #9690a8;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 23px;
+    color: var(--purple);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ==============================
+   SUCCESS PAGE
+================================ */
+.success-bg {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 18px;
+    background:
+        radial-gradient(circle at 12% 12%, #7045ef 0, transparent 34%),
+        radial-gradient(circle at 90% 85%, #ef45a5 0, transparent 30%),
+        linear-gradient(135deg, #10152f, #29205d, #104956);
+}
+
+.success-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    border: 1px solid #ffffffb0;
+    border-radius: 28px;
+    background: #fffffffa;
+    box-shadow: 0 35px 90px #060b2b70;
+    text-align: center;
+    animation: slideUp 0.7s ease;
+}
+
+.success-ribbon {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 30px;
+    background: linear-gradient(100deg, #eee7ff, #ffebf5);
+    color: #8050df;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.success-mark {
+    display: grid;
+    place-items: center;
+    width: 88px;
+    height: 88px;
+    margin: 25px auto 20px;
+    border-radius: 27px;
+    background: linear-gradient(135deg, #0cb99a, #5ddbb6);
+    box-shadow: 0 12px 30px #0aab8d35;
+    color: white;
+    font-size: 45px;
+    font-weight: 800;
+    transform: rotate(-5deg);
+}
+
+.success-card h1 {
+    margin: 13px 0;
+    color: #281d4d;
+    font-family: 'Outfit', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.success-card h1 span {
+    color: #a246df;
+}
+
+.success-card > p {
+    color: #858097;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.success-steps {
+    display: grid;
+    gap: 12px;
+    margin: 25px 0;
+    padding: 18px;
+    border-radius: 15px;
+    background: linear-gradient(110deg, #f1eaff, #fff0f7, #e9fbf7);
+    color: #625878;
+    text-align: left;
+    font-size: 12px;
+}
+
+.success-steps i {
+    display: inline-grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #d6f8e9;
+    color: #078d70;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.success-button {
+    min-height: 51px;
+}
+
+.success-home {
+    display: inline-block;
+    margin-top: 18px;
+    color: #786d98;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.success-home:hover {
+    color: var(--purple);
+}
+
+/* ==============================
+   BOTTOM BANNER
+================================ */
+.bottom-banner {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-top: 45px;
+    padding: 25px;
+    border: 1px solid #e9e1ff;
+    border-radius: 20px;
+    background: linear-gradient(110deg, #eee7ff, #fff0f7, #e5faff);
+}
+
+.banner-icon {
+    display: grid;
+    place-items: center;
+    width: 53px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: white;
+    font-size: 27px;
+    box-shadow: 0 7px 20px #3c236d10;
+}
+
+.bottom-banner strong {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+}
+
+.bottom-banner p {
+    margin: 5px 0 0;
+    color: #837c9d;
+    font-size: 12px;
+}
+
+.banner-star {
+    margin-left: auto;
+    color: #a57af4;
+    font-size: 36px;
+}
+
+/* ==============================
+   FOOTER
+================================ */
+.academy-footer {
+    padding: 25px 0;
+    border-top: 1px solid #ece7f7;
+    background: white;
+}
+
+.academy-footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    color: #9a94ac;
+    font-size: 11px;
+}
+
+.academy-footer .container span:first-child {
+    color: #7650cb;
+    font-weight: 800;
+}
+
+/* ==============================
+   ALERT MESSAGES
+================================ */
+.alert {
+    border: none;
+    border-radius: 13px;
+    font-size: 13px;
+}
+
+.alert-danger {
+    color: #a32948;
+    background: linear-gradient(100deg, #ffe5ed, #fff0f3);
+}
+
+.alert-success {
+    color: #087f68;
+    background: linear-gradient(100deg, #d9f9ed, #effff8);
+}
+
+/* ==============================
+   ANIMATIONS
+================================ */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 992px) {
+    .apply-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .apply-course-panel {
+        order: 0;
+    }
+
+    .form-card {
+        order: 1;
+    }
+
+    .hero {
+        padding: 65px 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .login-card {
+        max-width: 430px;
+    }
+
+    .academy-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-bg {
+        padding: 25px 15px;
+    }
+
+    .login-card {
+        padding: 30px 22px;
+        border-radius: 22px;
+    }
+
+    .login-card h2 {
+        font-size: 25px;
+    }
+
+    .hero {
+        padding: 52px 16px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+        letter-spacing: -1.2px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .course-card {
+        padding: 22px;
+    }
+
+    .course-card h5 {
+        font-size: 18px;
+    }
+
+    .apply-hero {
+        padding: 42px 0 75px;
+    }
+
+    .apply-hero h1 {
+        font-size: 34px;
+    }
+
+    .apply-course-panel,
+    .form-card {
+        padding: 25px 21px;
+    }
+
+    .table-hero {
+        padding: 45px 0 85px;
+    }
+
+    .table-hero h1 {
+        font-size: 34px;
+    }
+
+    .table-toolbar {
+        padding: 17px;
+    }
+
+    .records-chip {
+        font-size: 8px;
+    }
+
+    .success-card {
+        padding: 30px 22px;
+    }
+
+    .success-card h1 {
+        font-size: 36px;
+    }
+
+    .bottom-banner {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .banner-star {
+        font-size: 25px;
+    }
+
+    .navbar-brand {
+        font-size: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
